@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Comps_hello } from '#src/Comps/hello';
+import { Comps_misc_placeholder, Comps_testcomp } from '#src/Comps';
 
 export default function Home() {
   return (
@@ -11,7 +10,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Comps_hello />
+        <Comps_misc_placeholder>
+          <p>Hello Worlddd</p>
+        </Comps_misc_placeholder>
+        <Comps_testcomp />
       </main>
     </div>
   );

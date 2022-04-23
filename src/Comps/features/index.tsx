@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Comps_misc_placeholder } from '#src/Comps';
-
 interface Props {}
 
 export const Comps_features = (props: Props) => {

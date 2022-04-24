@@ -3,6 +3,7 @@ import React from 'react';
 interface Props {}
 
 export const Comps_hello = (props: Props) => {
+  console.log('--Comps_hello');
   return (
     <div>
       <p>

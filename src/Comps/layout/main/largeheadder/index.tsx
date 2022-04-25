@@ -3,11 +3,18 @@ import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Comps_layout_main_profilemenu } from '#src/Comps/layout/main/profilemenu';
+import { useSelector } from '#src/stores/hooks';
 
-interface Props {}
+interface Props {
+  open: boolean;
+  navigation: any[];
+  userNavigation: any[];
+}
 
 export const Comps_layout_main_largeheadder = (props: Props) => {
-  const { navigation, userNavigation, user, open = false } = props;
+  const user = useSelector((selects) => selects.stores_profile);
+  const { navigation, userNavigation, open = false } = props;
+
   return (
     <div className="Comps_layout_main_largeheadder max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between h-16">
@@ -52,10 +59,7 @@ export const Comps_layout_main_largeheadder = (props: Props) => {
           </button>
 
           {/* Profile dropdown */}
-          <Comps_layout_main_profilemenu
-            userNavigation={userNavigation}
-            user={user}
-          />
+          <Comps_layout_main_profilemenu userNavigation={userNavigation} />
         </div>
         <div className="-mr-2 flex items-center sm:hidden">
           {/* Mobile menu button */}

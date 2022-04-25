@@ -2,15 +2,16 @@ import React from 'react';
 
 import { Disclosure } from '@headlessui/react';
 import { BellIcon } from '@heroicons/react/outline';
+import { useSelector } from '#src/stores/hooks';
 
 interface Props {
-  user: any;
   navigation: any[];
   userNavigation: any[];
 }
 
 export const Comps_layout_main_dropdownnav = (props: Props) => {
-  const { user = {}, navigation = [], userNavigation = [] } = props;
+  const user = useSelector((selects) => selects.stores_profile);
+  const { navigation = [], userNavigation = [] } = props;
 
   return (
     <div className="Comps_layout_main_dropdownnav">

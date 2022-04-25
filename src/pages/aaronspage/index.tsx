@@ -1,4 +1,3 @@
-import { Comps_misc_aaronsmess, Comps_hello } from '#src/Comps';
 import Head from 'next/head';
 
 export const pages_aaronspage = () => {
@@ -11,8 +10,6 @@ export const pages_aaronspage = () => {
       </Head>
       <main>
         <h1>pages_aaronspage</h1>
-        <Comps_hello />
-        <Comps_misc_aaronsmess />
       </main>
     </div>
   );

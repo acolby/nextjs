@@ -1,13 +1,16 @@
 import React from 'react';
 
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Menu } from '@headlessui/react';
+import { useSelector } from '#src/stores/hooks';
 
-interface Props {}
+interface Props {
+  userNavigation: any[];
+}
 
 export const Comps_layout_main_profilemenu = (props: Props) => {
-  const { userNavigation, user } = props;
+  const user = useSelector((selects) => selects.stores_profile);
+
+  const { userNavigation } = props;
   return (
     <Menu as="div" className="ml-3 relative">
       <div>

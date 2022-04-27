@@ -15,3 +15,11 @@ export default function pages_splash() {
     </div>
   );
 }
+
+export const navigation = {
+  name: 'Splach',
+  layout: '',
+  href: '#',
+};
+
+pages_splash.navigation = navigation;

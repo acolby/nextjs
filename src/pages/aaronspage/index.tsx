@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Comps_layout_main } from '#src/Comps';
 
 export const pages_aaronspage = () => {
   return (
@@ -16,3 +17,11 @@ export const pages_aaronspage = () => {
 };
 
 export default pages_aaronspage;
+
+export const navigation = {
+  name: 'Aarons',
+  layout: 'main',
+  href: '#',
+};
+
+pages_aaronspage.navigation = navigation;

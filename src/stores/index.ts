@@ -14,7 +14,7 @@ export const stores = {
   init: (initial: any = {}) => {
     const _store = initStore({
       models,
-    });
+    }); // TODO join immer
     // add the dispatch metthods to the dispatcher
     Object.keys(_store.dispatch).forEach((key) => {
       actions[key] = _store.dispatch[key];

@@ -1,23 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Provider } from 'react-redux';
 import { stores } from '#src/stores';
-import '../styles/index.css';
 import { Comps_layout_main } from '#src/Comps';
+import '../styles/index.css';
+import type { AppProps } from 'next/app';
 
-interface Props {
-  Component: React.ElementType;
-}
+const layoutMap = {
+  main: Comps_layout_main,
+};
 
-const store = stores.init();
+const store = stores.init({});
 
-function MyApp({ Component }: Props) {
+export default function App({ Component, pageProps }: AppProps) {
+  const Layout = layoutMap[Component?.navigation?.layout] || Fragment;
+
   return (
     <Provider store={store}>
-      <Comps_layout_main>
-        <Component />
-      </Comps_layout_main>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   );
 }
-
-export default MyApp;

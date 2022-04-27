@@ -1,6 +1,4 @@
 
-export { Comps_carousel } from '#src/Comps/carousel';
-export { Comps_features } from '#src/Comps/features';
 export { Comps_layout_main } from '#src/Comps/layout/main';
 export { Comps_layout_main_dropdownnav } from '#src/Comps/layout/main/dropdownnav';
 export { Comps_layout_main_largeheadder } from '#src/Comps/layout/main/largeheadder';

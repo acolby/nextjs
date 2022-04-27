@@ -18,3 +18,11 @@ export const CREDITOR_UNDERSCORE_NAME = () => {
 };
 
 export default CREDITOR_UNDERSCORE_NAME;
+
+export const navigation = {
+  name: 'CREDITOR_UNDERSCORE_NAME',
+  layout: 'main',
+  href: '#',
+};
+
+CREDITOR_UNDERSCORE_NAME.navigation = navigation;

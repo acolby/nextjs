@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Comps_marketing_hero } from '#src/Comps';
 
-export default function Home() {
+export default function index() {
   return (
     <div>
       <Head>
@@ -15,3 +15,11 @@ export default function Home() {
     </div>
   );
 }
+
+export const navigation = {
+  name: 'Splash',
+  layout: '',
+  href: '#',
+};
+
+index.navigation = navigation;

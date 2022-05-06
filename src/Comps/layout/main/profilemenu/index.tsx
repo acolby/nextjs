@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Menu } from '@headlessui/react';
-import { useSelector } from '#src/stores/hooks';
+import { useSelector, useDispatch } from '#src/stores/hooks';
 
 interface Props {
   userNavigation: any[];
@@ -9,6 +9,7 @@ interface Props {
 
 export const Comps_layout_main_profilemenu = (props: Props) => {
   const user = useSelector((selects) => selects.stores_profile);
+  const actions = useDispatch();
 
   const { userNavigation } = props;
   return (

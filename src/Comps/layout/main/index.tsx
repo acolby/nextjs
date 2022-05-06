@@ -9,12 +9,6 @@ import {
 import { Disclosure } from '@headlessui/react';
 import { useSelector } from '#src/stores/hooks';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
   { name: 'Settings', href: '#' },
@@ -26,7 +20,7 @@ interface Props {
 }
 
 export const Comps_layout_main = (props: Props) => {
-  const user = useSelector((select) => select.stores_profile);
+  const navigation = useSelector((select) => select.stores_navigation);
 
   return (
     <>

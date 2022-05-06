@@ -18,8 +18,6 @@ export default function index() {
 
 export const navigation = {
   name: 'Splash',
-  layout: '',
-  href: '#',
+  comp: 'index',
+  layout: 'Comps_layout_main',
 };
-
-index.navigation = navigation;

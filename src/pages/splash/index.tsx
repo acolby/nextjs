@@ -17,9 +17,7 @@ export default function pages_splash() {
 }
 
 export const navigation = {
-  name: 'Splach',
-  layout: '',
-  href: '#',
+  name: 'Splashhh',
+  comp: 'pages_splash',
+  layout: 'Comps_layout_main',
 };
-
-pages_splash.navigation = navigation;

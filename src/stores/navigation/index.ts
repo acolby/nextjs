@@ -5,7 +5,7 @@ import { navigation } from '#src/pages/navigation';
 type stores_navigation_State = {
   name: string;
   layout: string;
-  href: string;
+  comp: string;
 }[];
 
 export const stores_navigation = createModel<RootModel>()({

@@ -3,6 +3,7 @@ import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { BellIcon } from '@heroicons/react/outline';
 import { useSelector } from '#src/stores/hooks';
+import { useRouter } from 'next/router';
 
 interface Props {
   navigation: any[];
@@ -11,7 +12,10 @@ interface Props {
 
 export const Comps_layout_main_dropdownnav = (props: Props) => {
   const user = useSelector((selects) => selects.stores_profile);
+  const router = useRouter();
   const { navigation = [], userNavigation = [] } = props;
+
+  console.log(router.pathname);
 
   return (
     <div className="Comps_layout_main_dropdownnav">

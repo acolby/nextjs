@@ -33,6 +33,7 @@ export const Comps_layout_main_profilemenu = (props: Props) => {
                 }
               >
                 {item.name}
+                {user.name}
               </a>
             )}
           </Menu.Item>

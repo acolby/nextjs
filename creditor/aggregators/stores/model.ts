@@ -13,6 +13,7 @@ module.exports = ({ paths = [] }) => {
   const models = filtered.map((item) => `  ${item.replace(/\//g, '_')},`);
 
   return [
+    '/* CREDITOR_GENERATED */',
     "import { RematchRootState, RematchDispatch, Models } from '@rematch/core';",
     '',
     ...imports,

@@ -9,5 +9,5 @@ type stores_navigation_State = {
 }[];
 
 export const stores_navigation = createModel<RootModel>()({
-  state: navigation as unknown as stores_navigation_State,
+  state: navigation as stores_navigation_State,
 });

@@ -9,12 +9,15 @@ module.exports = ({ paths = [] }) => {
 
   const navigations = paths.map((item) => `  ${item.replace(/\//g, '_')},`);
 
-  return [
-    ...imports,
-    '',
-    'export const navigation = [',
-    ...navigations,
-    ']',
-    '',
-  ].join('\n');
+  return (
+    [
+      '/* CREDITOR_GENERATED */',
+      ...imports,
+      '',
+      'export const navigation = [',
+      ...navigations,
+      ']',
+      '',
+    ].join('\n') + ';'
+  );
 };

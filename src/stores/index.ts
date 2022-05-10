@@ -1,5 +1,5 @@
 import { init as initStore } from '@rematch/core';
-import { RootState, Actions, models } from '#src/stores/model';
+import { RootState, RootModel, Actions, models } from '#src/stores/model';
 
 export const actions = {} as Actions;
 
@@ -12,7 +12,7 @@ export function getState(): RootState {
 
 export const stores = {
   init: (initial: any = {}) => {
-    const _store = initStore({
+    const _store = initStore<RootModel>({
       models,
     }); // TODO join immer
     // add the dispatch metthods to the dispatcher

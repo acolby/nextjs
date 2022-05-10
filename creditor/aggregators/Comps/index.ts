@@ -5,5 +5,5 @@ module.exports = ({ paths = [] }) => {
     (item) => `export { ${item.replace(/\//g, '_')} } from '#src/${item}';`
   );
 
-  return ['', ..._exports, ''].join('\n');
+  return ['/* CREDITOR_GENERATED */', '', ..._exports, ''].join('\n');
 };

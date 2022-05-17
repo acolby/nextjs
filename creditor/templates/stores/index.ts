@@ -1,16 +1,14 @@
 import { createModel } from '@rematch/core';
 import type { RootModel } from '#src/stores/model';
 
-type CREDITOR_UNDERSCORE_NAME_State = {
-  name: string;
+const defaultState = {
+  name: '',
 };
 
 export const CREDITOR_UNDERSCORE_NAME = createModel<RootModel>()({
-  state: {
-    name: 'CREDITOR_UNDERSCORE_NAME',
-  } as CREDITOR_UNDERSCORE_NAME_State,
+  state: defaultState,
   reducers: {
-    rename(state, payload: string) {
+    rename(state, payload: string): typeof defaultState {
       return {
         ...state,
         name: payload,

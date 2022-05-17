@@ -35,22 +35,24 @@ export const Comps_layout_main_largeheadder = (props: Props) => {
             />
           </div>
           <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-            {navigation.map((item) => {
-              const current =
-                `/${item.comp.split('_').slice(1).join('/')}` ===
-                router.pathname;
-              return (
-                <Comps_misc_link
-                  page={item.comp}
-                  className={
-                    (current
-                      ? 'border-indigo-500 text-gray-900'
-                      : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700') +
-                    ' inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
-                  }
-                />
-              );
-            })}
+            {navigation
+              .filter((item) => item.layout === 'Comps_layout_main')
+              .map((item) => {
+                const current =
+                  `/${item.comp.split('_').slice(1).join('/')}` ===
+                  router.pathname;
+                return (
+                  <Comps_misc_link
+                    page={item.comp}
+                    className={
+                      (current
+                        ? 'border-indigo-500 text-gray-900'
+                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700') +
+                      ' inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'
+                    }
+                  />
+                );
+              })}
           </div>
         </div>
         <div className="hidden sm:ml-6 sm:flex sm:items-center">

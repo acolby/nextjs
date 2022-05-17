@@ -19,5 +19,5 @@ export default function index() {
 export const navigation = {
   name: 'Splash',
   comp: 'index',
-  layout: 'Comps_layout_main',
+  layout: 'Comps_layout_none',
 };

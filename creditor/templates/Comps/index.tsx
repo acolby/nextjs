@@ -3,14 +3,12 @@ import React from 'react';
 import { Comps_misc_placeholder } from '#src/Comps';
 
 // import { createStructureSelector } from '#src/selectors/util'
-// ipoort { userSelector } from '#src/stors/hooks';
+// import { userSelector } from '#src/stors/hooks';
 
 const defaultProps = {
-  key: 'default',
-  name: '',
+  idKey: 'default',
 } as {
-  name: string;
-  key?: string;
+  idKey?: string;
   children?: JSX.Element;
 };
 
@@ -21,9 +19,10 @@ const defaultProps = {
 export const CREDITOR_UNDERSCORE_NAME = (_props: typeof defaultProps) => {
   const props = { ...defaultProps, ..._props };
   // const selected = useSelector((state) => selector(state, props));
+  const key = props.idKey || 'default';
 
   return (
-    <div className="CREDITOR_UNDERSCORE_NAME">
+    <div id={`CREDITOR_UNDERSCORE_NAME:${key}`} key={key}>
       <Comps_misc_placeholder>
         <p>CREDITOR_UNDERSCORE_NAME</p>
       </Comps_misc_placeholder>

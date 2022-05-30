@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Comps_webthree_walletoverview } from '#src/Comps';
+import { Comps_walletoverview } from '#src/Comps';
 
 export const pages_wallet = () => {
   return (
@@ -11,7 +11,7 @@ export const pages_wallet = () => {
       </Head>
       <main>
         <h1>Your Wallet</h1>
-        <Comps_webthree_walletoverview token={'asdfsad'} />
+        <Comps_walletoverview />
       </main>
     </div>
   );

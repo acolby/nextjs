@@ -7,7 +7,9 @@ interface Props {
 }
 
 export const Comps_webthree_walletoverview = (props: Props) => {
-  const wallet = useSelector((state) => state.stores_profile_wallet);
+  const wallet = useSelector((state) => state.stores_wallet);
 
-  return <div className="Comps_webthree_walletoverview">type = {}</div>;
+  return (
+    <div className="Comps_webthree_walletoverview">type = {wallet.balance}</div>
+  );
 };
